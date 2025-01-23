@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dany Arabo - CyberSecurity Engineer</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #d4d4d4;
+      margin: 0;
+      padding: 0;
+      overflow-y: scroll;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #141414, #2a2a2a); /* Further darkened gradient */
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      overflow: hidden; /* Ensure binary rain stays within the header */
+    }
+
+    /* Move name and major out of the banner and place it above summary */
+    .name-major-box {
+      display: inline-block;
+      background-color: #006400; /* Dark green */
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border: 2px solid #006400; /* Outline */
+      text-align: center;
+    }
+
+    .name-major-box h1,
+    .name-major-box h2 {
+      margin: 0;
+      color: #ff0000; /* Dark bloody red */
+    }
+
+    /* Matrix binary rain effect in header */
+    #binary-rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      color: #00ff00; /* Matrix green */
+      font-size: 18px;
+      white-space: nowrap;
+      line-height: 20px;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+
+    .binary-column {
+      position: absolute;
+      top: 0;
+      animation: fall 5s linear infinite;
+    }
+
+    /* Section styles */
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      border: 2px solid gold;
+      background-color: #333333;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      animation: glowEffect 5s infinite;
+    }
+
+    section h3 {
+      color: gold;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 5px 0;
+      color: #32cd32; /* Dark green */
+    }
+
+    /* Contact links */
+    a {
+      text-decoration: none;
+      color: #ff4500; /* Slight bright red */
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Glow effect */
+    @keyframes glowEffect {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      }
+    }
+
+    /* Movable floating effect */
+    section {
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="binary-rain"></div> <!-- Matrix rain effect unchanged -->
+  </header>
+
+  <main>
+    <!-- Name and Major Box (moved from header) -->
+    <div class="name-major-box">
+      <h1>Dany Arabo</h1>
+      <h2>CyberSecurity Engineering</h2>
+    </div>
+
+    <section id="summary">
+      <h3>Summary</h3>
+      <p>
+        Passionate CyberSecurity Engineer with advanced expertise in IT Security, Cloud Data, Data Breaches, and Penetration Testing. 
+        Skilled at identifying vulnerabilities and implementing solutions to secure complex systems.
+      </p>
+    </section>
+
+    <section id="expertise">
+      <h3>Expertise</h3>
+      <ul>
+        <li>🛡️ Penetration Testing & Security Audits</li>
+        <li>🌐 Network Vulnerability Assessment & Breach Management</li>
+        <li>☁️ Cloud Security & Risk Mitigation</li>
+        <li>⚠️ Incident Response & Threat Analysis</li>
+        <li>🔍 Security Exploitation & Monitoring</li> <!-- Added back the missing bullet point -->
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>⚡ PHP</li> <!-- Corrected to ⚡ for PHP -->
+        <li>💎 RUBY</li>
+        <li>🔷 TYPESCRIPT</li>
+        <li>🐍 PYTHON</li> <!-- Corrected to 🐍 for Python -->
+        <li>💻 JAVASCRIPT</li> <!-- Re-added JavaScript with the 💻 emoji -->
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:arabodanny002@gmail.com">arabodanny002@gmail.com</a></p>
+      <p>Phone: <a href="tel:+12487871837">(248)-787-1837</a></p>
+    </section>
+
+    <section id="certifications">
+      <h3>Certifications</h3>
+      <ul>
+        <li><a href="https://www.coursera.org/account/accomplishments/certificate/CVV8TCMJ03GB" target="_blank">Introduction to Networking and Cloud Computing</a></li>
+        <li><a href="https://www.coursera.org/account/accomplishments/certificate/PKW5DFTRM9UQ" target="_blank">Introduction To Operating Systems & Security</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // Matrix binary rain effect (unchanged)
+    const binaryRain = document.getElementById('binary-rain');
+    const columns = 40; // Number of binary columns
+
+    for (let i = 0; i < columns; i++) {
+      const column = document.createElement('div');
+      column.className = 'binary-column';
+      column.style.left = `${(i / columns) * 100}%`;
+      column.style.animationDelay = `${Math.random() * 5}s`;
+
+      let binaryStr = '';
+      for (let j = 0; j < 20; j++) {
+        binaryStr += Math.random() > 0.5 ? '0' : '1';
+        binaryStr += '<br>';
+      }
+      column.innerHTML = binaryStr;
+      binaryRain.appendChild(column);
+    }
+  </script>
+</body>
+</html>
