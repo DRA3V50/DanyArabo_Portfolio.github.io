@@ -24,31 +24,29 @@
       position: relative;
       text-align: center;
       padding: 40px 20px;
-      background: linear-gradient(to right, #141414, #2a2a2a); /* Further darkened gradient */
+      background: linear-gradient(to right, #141414, #2a2a2a);
       color: #ffffff;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-      overflow: hidden; /* Ensure binary rain stays within the header */
+      overflow: hidden;
     }
 
-    /* Move name and major out of the banner and place it above summary */
     .name-major-box {
       display: inline-block;
-      background-color: #006400; /* Dark green */
+      background-color: #006400;
       padding: 10px 20px;
       border-radius: 8px;
       margin-top: 40px;
       margin-bottom: 20px;
-      border: 2px solid #006400; /* Outline */
+      border: 2px solid #006400;
       text-align: center;
     }
 
     .name-major-box h1,
     .name-major-box h2 {
       margin: 0;
-      color: #ff0000; /* Dark bloody red */
+      color: #ff0000;
     }
 
-    /* Matrix binary rain effect in header */
     #binary-rain {
       position: absolute;
       top: 0;
@@ -57,19 +55,15 @@
       height: 100%;
       z-index: 0;
       overflow: hidden;
-      color: #00ff00; /* Matrix green */
+      color: #00ff00;
       font-size: 18px;
       white-space: nowrap;
       line-height: 20px;
     }
 
     @keyframes fall {
-      0% {
-        transform: translateY(-100%);
-      }
-      100% {
-        transform: translateY(100%);
-      }
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
     }
 
     .binary-column {
@@ -78,7 +72,6 @@
       animation: fall 5s linear infinite;
     }
 
-    /* Section styles */
     section {
       margin: 20px 0;
       padding: 20px;
@@ -87,6 +80,8 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
       animation: glowEffect 5s infinite;
+      position: relative;
+      animation: float 6s ease-in-out infinite;
     }
 
     section h3 {
@@ -100,55 +95,36 @@
 
     ul li {
       margin: 5px 0;
-      color: #32cd32; /* Dark green */
+      color: #32cd32;
     }
 
-    /* Contact links */
     a {
       text-decoration: none;
-      color: #ff4500; /* Slight bright red */
+      color: #ff4500;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    /* Glow effect */
     @keyframes glowEffect {
-      0% {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-      }
-    }
-
-    /* Movable floating effect */
-    section {
-      position: relative;
-      animation: float 6s ease-in-out infinite;
+      0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+      50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+      100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
 <body>
   <header>
-    <div id="binary-rain"></div> <!-- Matrix rain effect unchanged -->
+    <div id="binary-rain"></div>
   </header>
 
   <main>
-    <!-- Name and Major Box (moved from header) -->
     <div class="name-major-box">
       <h1>Dany Arabo</h1>
       <h2>CyberSecurity Engineering</h2>
@@ -169,18 +145,23 @@
         <li>🌐 Network Vulnerability Assessment & Breach Management</li>
         <li>☁️ Cloud Security & Risk Mitigation</li>
         <li>⚠️ Incident Response & Threat Analysis</li>
-        <li>🔍 Security Exploitation & Monitoring</li> <!-- Added back the missing bullet point -->
+        <li>🔍 Security Exploitation & Monitoring</li>
       </ul>
     </section>
 
     <section id="skills">
       <h3>Skills</h3>
       <ul>
-        <li>⚡ PHP</li> <!-- Corrected to ⚡ for PHP -->
-        <li>💎 RUBY</li>
-        <li>🔷 TYPESCRIPT</li>
-        <li>🐍 PYTHON</li> <!-- Corrected to 🐍 for Python -->
-        <li>💻 JAVASCRIPT</li> <!-- Re-added JavaScript with the 💻 emoji -->
+        <li>🐘 PHP</li>
+        <li>💎 Ruby</li>
+        <li>🔷 TypeScript</li>
+        <li>🐍 Python</li>
+        <li>🟨 JavaScript</li>
+        <li>🎯 C#</li>
+        <li>➕ C++</li>
+        <li>🗃️ SQL</li>
+        <li>🖥️ Bash</li>
+        <li>🦅 Swift</li>
       </ul>
     </section>
 
@@ -201,9 +182,8 @@
   </main>
 
   <script>
-    // Matrix binary rain effect (unchanged)
     const binaryRain = document.getElementById('binary-rain');
-    const columns = 40; // Number of binary columns
+    const columns = 40;
 
     for (let i = 0; i < columns; i++) {
       const column = document.createElement('div');
